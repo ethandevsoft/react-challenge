@@ -27,6 +27,44 @@
 .App-link {
   color: #61dafb;
 }
+.image {
+  display: block;
+  /* width: 100%; */
+  margin: auto;
+  height: auto;
+}
+.overlay{
+  position: relative !important;
+}
+.overlay span{
+  /* display: block; */
+  text-align: center;
+  display: none;
+}
+.overlay:hover span{
+  display: block;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+}
+.overlay:hover:after{
+  content: "";
+  position: absolute;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+}
 
 @keyframes App-logo-spin {
   from {
